@@ -3,7 +3,57 @@
 @tailwind utilities;
 
 body {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
+  font-family: "Overpass", sans-serif;
+}
+
+h2 {
+  @apply font-bold text-center text-gray-800 text-3xl mb-4 md:text-4xl lg:text-5xl xl:text-6xl;
+}
+
+h3 {
+  @apply font-bold text-center text-gray-800 text-2xl mb-5 md:text-4xl;
+}
+
+.showcase {
+  position: relative;
+  /* background: url("./images/bg-pattern-intro.svg") no-repeat center/cover; */
+  height: 600px;
+}
+
+.showcase .overlay {
+  position: absolute;
+  background-image: linear-gradient(
+    120deg,
+    hsl(13, 100%, 72%),
+    hsl(353, 100%, 62%)
+  );
+  height: 600px;
+  border-bottom-left-radius: 50px;
+  /* z-index: -10; */
+  width: 100%;
+}
+
+.state {
+  background-color: hsl(237, 17%, 21%);
+  border-radius: 0 100px 0 100px;
+}
+
+.footer {
+  background-color: hsl(240, 10%, 16%);
+  color: hsl(240, 2%, 79%);
+  border-radius: 0 100px 0 0;
+}
+
+.attribution {
+  font-size: 14px;
+  text-align: center;
+  background-color: hsl(240, 10%, 16%);
+}
+
+.attribution a {
+  color: hsl(0, 0%, 73%);
+}
+
+.attribution a:hover {
+  color: #fff;
 }
