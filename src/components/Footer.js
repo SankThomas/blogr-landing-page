@@ -1,5 +1,5 @@
 import React from "react"
-import Logo from "./Logo"
+import logo from "../images/logo.svg"
 import { footer } from "../data/footer"
 
 const Footer = () => {
@@ -8,12 +8,13 @@ const Footer = () => {
 
   return (
     <>
+      {/* Probably changed the design of the footer. I think it looks great */}
       <footer className="footer py-20 text-center">
-        <div className="mb-10">
-          <Logo />
+        <div className="mb-10 md:mb-0">
+          <img src={logo} alt="" className="block mx-auto" />
         </div>
 
-        <div>
+        <div className="md:grid md:grid-cols-2 lg:grid-cols-3">
           {items.map(({ id, title, links }) => {
             return (
               <div key={id}>
