@@ -8,12 +8,14 @@ const Navbar = () => {
   return (
     <>
       <nav>
-        <div>
+        <div className="md:flex">
           {links.map((link, index) => {
             const { id, title, dropdown } = link
             return (
               <>
-                <p key={index}>{title}</p>
+                <p key={index} className="py-2 md:p-0 md:mx-2 md:text-white">
+                  {title}
+                </p>
                 <ul>
                   {dropdown.map((drop) => {
                     return (
